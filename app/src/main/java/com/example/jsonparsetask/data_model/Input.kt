@@ -12,3 +12,7 @@ data class Input(
     val is_active: Boolean,
     val icon: String
 )
+@JsonClass(generateAdapter = true)
+data class InputList(
+    val inputs: List<List<Input>>
+)
