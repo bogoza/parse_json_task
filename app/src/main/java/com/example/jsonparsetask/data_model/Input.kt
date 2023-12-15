@@ -1,6 +1,7 @@
 package com.example.jsonparsetask.data_model
 
 import com.squareup.moshi.JsonClass
+import java.util.UUID
 
 @JsonClass(generateAdapter = true)
 data class Input(
@@ -16,3 +17,7 @@ data class Input(
 data class InputList(
     val inputs: List<List<Input>>
 )
+enum class FieldType{
+    INPUT,
+    CHOOSER
+}
